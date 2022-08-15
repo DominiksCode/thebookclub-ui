@@ -27,4 +27,4 @@ jobs:
           aws s3 sync ./dist s3://thebookclubassets
       - name: Invalidate Cloudfront
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id EXBAOAOZA275H --paths "/*"
