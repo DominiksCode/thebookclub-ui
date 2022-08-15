@@ -1,0 +1,30 @@
+name: Deploy to hosting
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+          aws-region: eu-central-1
+      - name: Copy files to s3
+        run: |
+          aws s3 sync ./build s3://thebookclubassets
+      - name: Invalidate Cloudfront
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
