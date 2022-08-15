@@ -24,7 +24,7 @@ jobs:
           aws-region: eu-central-1
       - name: Copy files to s3
         run: |
-          aws s3 sync ./build s3://thebookclubassets
+          aws s3 sync ./dist s3://thebookclubassets
       - name: Invalidate Cloudfront
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
