@@ -6,14 +6,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <img src="./assets/book-club-dark.png" class="logo" alt="Vite logo" />
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="If you don't like this book then I don't like you" />
 </template>
 
 <style scoped>
