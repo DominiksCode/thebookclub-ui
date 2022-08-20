@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "rick",
+      "name": "Rick Sanchez",
+      "email": "rick.sanchez@mail.de",
+      "active": true,
+      "bookList": [
+        "a",
+        "lot"
+      ],
+      "antiGenre": [
+        "that romance stuff"
+      ],
+      "bookRecipient": "morty"
+    },
+    {
+      "id": "morty",
+      "name": "Morty Smith",
+      "email": "morty.smith@mail.de",
+      "active": true,
+      "bookList": [
+        "way",
+        "more"
+      ],
+      "antiGenre": [
+        "your diary"
+      ],
+      "bookRecipient": "summer"
+    },
+    {
+      "id": "summer",
+      "name": "Summer Smith",
+      "email": "summer.smith@mail.de",
+      "active": true,
+      "bookList": [
+        "bobby verse",
+        "die elfen"
+      ],
+      "antiGenre": [
+        "yo mama"
+      ],
+      "bookRecipient": "rick"
+    }
+  ]
+}
