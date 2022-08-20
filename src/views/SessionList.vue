@@ -1,29 +1,33 @@
 <template>
-  <h1>Choose your character!</h1>
+  <h1>Bist du bereit für die Session?</h1>
   <div class="user-list">
-    <user-card v-for="user in users" :key="user.id" :user="user" />
+    <session-card
+      v-for="session in sessions"
+      :key="session.id"
+      :session="session"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import UserCard from '../components/UserCard.vue'
 import ClubInfoService from '../services/ClubInfoService'
-import { User } from '../models/user'
 import { defineComponent } from 'vue'
+import { Session } from '../models/session'
+import SessionCard from '../components/SessionCard.vue'
 
 export default defineComponent({
   components: {
-    UserCard
+    SessionCard
   },
   data() {
     return {
-      users: [] as User[]
+      sessions: [] as Session[]
     }
   },
   created() {
-    ClubInfoService.getUsers()
+    ClubInfoService.getSessions()
       .then((response) => {
-        this.users = response.data
+        this.sessions = response.data
       })
       .catch((error) => {
         console.error(error)

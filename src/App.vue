@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link :to="{ name: 'UserList' }">User List</router-link> |
+      <router-link :to="{ name: 'SessionList' }">Session List</router-link> |
       <router-link :to="{ name: 'About' }">About</router-link>
     </div>
     <div>

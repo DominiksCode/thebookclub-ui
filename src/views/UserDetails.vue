@@ -1,5 +1,5 @@
 <template>
-  <div v-if="user.name">
+  <div v-if="user.id">
     <h1>{{ user.name }}</h1>
     <p>{{ user.email }}</p>
     <p>
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import UserService from '../services/UserService'
+import UserService from '../services/ClubInfoService'
 import { defineComponent } from 'vue'
 import { User } from '../models/user'
 
