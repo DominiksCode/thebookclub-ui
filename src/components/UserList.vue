@@ -1,19 +1,20 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
   <h1>{{ msg }}</h1>
 
-  <h2>
-    "Hier wird bald viel passieren"
-  </h2>
+  <h2>"Hier wird bald viel passieren"</h2>
   <p class="read-the-docs">jeder company twitter account bei creation, ever</p>
 </template>
+
+<script lang="ts">
+export default {
+  props: {
+    msg: {
+      type: String,
+      required: true,
+    },
+  },
+}
+</script>
 
 <style scoped>
 .read-the-docs {

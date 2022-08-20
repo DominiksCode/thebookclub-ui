@@ -1,15 +1,15 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <div>
     <img src="./assets/book-club-dark.png" class="logo" alt="Vite logo" />
   </div>
-  <HelloWorld msg="If you don't like this book then I don't like you" />
+  <UserList msg="If you don't like this book then I don't like you" />
 </template>
+
+<script setup lang="ts">
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import UserList from './components/UserList.vue'
+</script>
 
 <style scoped>
 .logo {
