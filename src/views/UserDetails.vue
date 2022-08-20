@@ -1,5 +1,5 @@
 <template>
-  <div v-if="user">
+  <div v-if="user.name">
     <h1>{{ user.name }}</h1>
     <p>{{ user.email }}</p>
     <p>
@@ -7,7 +7,11 @@
     </p>
     <p>I read {{ user.bookList.join(', ') }}</p>
     <p>I do not like {{ user.antiGenre.join(', ') }}</p>
-    <p>Currently ows a book to {{ user.bookRecipient }}</p>
+    <span>Currently ows a book to </span>
+    <router-link
+      :to="{ name: 'UserDetails', params: { id: user.bookRecipient } }"
+      >{{ user.bookRecipient }}</router-link
+    >
   </div>
 </template>
 
@@ -29,13 +33,21 @@ export default defineComponent({
     }
   },
   created() {
-    UserService.getUser(this.id)
-      .then((response) => {
-        this.user = response.data
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+    this.getUser()
+  },
+  updated() {
+    this.getUser()
+  },
+  methods: {
+    getUser(): void {
+      UserService.getUser(this.id)
+        .then((response) => {
+          this.user = response.data
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+    }
   }
 })
 </script>
