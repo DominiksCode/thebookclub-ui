@@ -10,5 +10,7 @@ currently we use [My JSON Server](https://my-json-server.typicode.com/) as mock 
 ## TODOS
 - [ ] write a good readme
 - [ ] inform Lilia about the design task
-- [ ] start with a simple user list
-- [ ] also add a simple user details page
+- [X] start with a simple user list
+- [X] also add a simple user details page
+- [ ] add a session list view
+- [ ] and a session detail list
