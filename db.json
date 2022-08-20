@@ -42,5 +42,26 @@
       ],
       "bookRecipient": "rick"
     }
+  ],
+  "sessions": [
+    {
+      "id": "august",
+      "start": "2022-08-01T00:00:00.000Z",
+      "end": "2022-09-01T00:00:00.000Z",
+      "participantList": [
+        "rick",
+        "morty",
+        "summer"
+      ]
+    },
+    {
+      "id": "september",
+      "start": "2022-09-01T00:00:00.000Z",
+      "end": "2022-10-01T00:00:00.000Z",
+      "participantList": [
+        "rick",
+        "summer"
+      ]
+    }
   ]
 }
