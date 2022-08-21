@@ -7,11 +7,6 @@
     </p>
     <p>I read {{ user.bookList.join(', ') }}</p>
     <p>I do not like {{ user.antiGenre.join(', ') }}</p>
-    <span>Currently ows a book to </span>
-    <router-link
-      :to="{ name: 'UserDetails', params: { id: user.bookRecipient } }"
-      >{{ user.bookRecipient }}</router-link
-    >
   </div>
 </template>
 

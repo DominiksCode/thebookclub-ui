@@ -3,13 +3,13 @@
     <h1>From {{ startMonth }} to {{ endMonth }}</h1>
     <p>{{ startDate }} - {{ endDate }}</p>
     <router-link
-      v-for="(participantId, index) in session.participantList"
+      v-for="(participantId, index) in participantList"
       :key="participantId"
       :to="{ name: 'UserDetails', params: { id: participantId } }"
     >
-      <span v-if="index === session.participantList.length - 1"> and </span>
+      <span v-if="index === participantList.length - 1"> and </span>
       {{ participantId
-      }}<span v-if="index !== session.participantList.length - 1">,</span>
+      }}<span v-if="index !== participantList.length - 1">,</span>
     </router-link>
     <span> are joining the game</span>
   </div>
@@ -45,6 +45,9 @@ export default defineComponent({
     },
     endMonth(): string {
       return MONTH_NAMES[this.endDate.getMonth()]
+    },
+    participantList(): string[] {
+      return Array.from(this.session.participantMap.keys())
     }
   },
   created() {
