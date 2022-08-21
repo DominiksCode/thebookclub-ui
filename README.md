@@ -16,5 +16,5 @@ currently we use [My JSON Server](https://my-json-server.typicode.com/) as mock 
   - [X] also add a simple user details page
   - [X] make "bookRecipient" a clickable link
 - session list
-  - [ ] add a session list view
-  - [ ] and a session detail list
+  - [X] add a session list view
+  - [X] and a session detail list
