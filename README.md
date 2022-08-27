@@ -18,3 +18,7 @@ currently we use [My JSON Server](https://my-json-server.typicode.com/) as mock 
 - session list
   - [X] add a session list view
   - [X] and a session detail list
+- state
+  - [ ] introduce pinia
+- styling
+  - [ ] introduce tailwind
